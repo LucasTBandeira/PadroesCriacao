@@ -16,9 +16,22 @@ public class Conta {
         this.nomeCorrentista = builder.nomeCorrentista;
         this.saldoLivreInicial = builder.saldoLivreInicial;
         this.saldoAplicacaoInicial = builder.saldoAplicacaoInicial;
-        this.taxaRemuneracao = builder.taxaRemuneracao;
-        this.taxaSaldoNegativo = builder.taxaSaldoNegativo;
         this.categorialInicial = builder.categoriaInicial;
+
+        if(categorialInicial == Conta.Categoria.NORMAL) {
+            this.taxaRemuneracao = 0.1;
+            this.taxaSaldoNegativo = 0.3;
+        }
+
+        if(categorialInicial == Conta.Categoria.ADVANCED) {
+            this.taxaRemuneracao = 0.2;
+            this.taxaSaldoNegativo = 0.2;
+        }
+
+        if(categorialInicial == Conta.Categoria.PREMIUM) {
+            this.taxaRemuneracao = 0.3;
+            this.taxaSaldoNegativo = 0.1;
+        }
     }
 
     public Long getNumero() {
@@ -66,8 +79,6 @@ public class Conta {
         // Optional parameters
         private int saldoLivreInicial = 0;
         private int saldoAplicacaoInicial = 0;
-        private double taxaRemuneracao = 0.0;
-        private double taxaSaldoNegativo = 0.0;
         private Categoria categoriaInicial = Categoria.NORMAL;
 
         public ContaBuilder(Long numero, String nomeCorrentista) {
@@ -82,16 +93,6 @@ public class Conta {
 
         public ContaBuilder saldoAplicacaoInicial(int saldoAplicacaoInicial) {
             this.saldoAplicacaoInicial = saldoAplicacaoInicial;
-            return this;
-        }
-
-        public ContaBuilder taxaRemuneracao(double taxaRemuneracao) {
-            this.taxaRemuneracao = taxaRemuneracao;
-            return this;
-        }
-
-        public ContaBuilder taxaSaldoNegativo(double taxaSaldoNegativo){
-            this.taxaSaldoNegativo = taxaSaldoNegativo;
             return this;
         }
 
