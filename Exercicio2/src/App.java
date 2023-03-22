@@ -1,25 +1,21 @@
-public class App {
+public class App2 {
     public static void main(String[] args) throws Exception {
 
-        Conta conta1 = new Conta.ContaBuilder(1l, "ContaNormal")
-        .build();
+        Conta conta1 = Conta.Builder.newInstance(9999,"maria")
+                       .build();
 
-        Conta conta2 = new Conta.ContaBuilder(2l,"ContaAdvanced")
-        .saldoLivreInicial(1000)
-        .saldoAplicacaoInicial(5000)
-        .categoriaInicial(Conta.Categoria.ADVANCED)
-        .build();
+        System.out.println(conta1);
 
-        Conta conta3 = new Conta.ContaBuilder(3l,"ContaPremium")
-        .saldoLivreInicial(5000)
-        .saldoAplicacaoInicial(10000)
-        .categoriaInicial(Conta.Categoria.PREMIUM)
-        .build();
 
-        System.out.println(conta1.toString());
-        System.out.println("=======================");
-        System.out.println(conta2.toString());
-        System.out.println("=======================");
-        System.out.println(conta3.toString());
+        Conta conta2 =  Conta.Builder.newInstance(777,"anderson")
+                        .saldoLivreInicial(7000)
+                        .salAplicacaoInicial(1120)
+                        .taxaRemuneracao(0.12)
+                        .taxaSaldoNegativo(0.1)
+                        .categoriaInicial(Categoria.ADVANCED)
+                        .build();
+        
+        System.out.println("\n"+conta2);
+            
     }
 }
