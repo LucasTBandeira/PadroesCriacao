@@ -75,10 +75,10 @@ public class Conta {
 
     @Override
     public String toString() {
-        return "Conta [numero=" + numero + ", nomeCorrentista=" + nomeCorrentista + ", saldoLivreInicial="
+        return "Conta numero=" + numero + ", nomeCorrentista=" + nomeCorrentista + ", saldoLivreInicial="
                 + saldoLivreInicial + ", salAplicacaoInicial=" + salAplicacaoInicial + ", taxaRemuneracao="
                 + taxaRemuneracao + ", taxaSaldoNegativo=" + taxaSaldoNegativo + ", categoriaInicial="
-                + categoriaInicial + "]";
+                + categoriaInicial;
     }
 
      

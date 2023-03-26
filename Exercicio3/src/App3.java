@@ -4,10 +4,10 @@ public class App3 {
         Personagem normal = Personagem.normal();
         System.out.println("normal " +normal);
 
-        Personagem poderoso = Personagem.poderoso(80);
+        Personagem poderoso = Personagem.poderoso(1000);
         System.out.println("poderoso " +poderoso);
 
-        Personagem soturno = Personagem.soturno(7);
+        Personagem soturno = Personagem.soturno(5);
         System.out.println("soturno " +soturno);
 
         Personagem diferente = Personagem.completa(1, 10, 5);

@@ -9,14 +9,11 @@ public class App {
         col1.add("c");
         col1.add("b");
 
-        // System.out.println(col1.getClass());
-        // for(String i: col1){
-        //     System.out.println(i);
-        // }
-        
+        System.out.println(col1.getClass());
+        for(String i: col1){
+            System.out.println(i);
+        }
 
-
-        
         Collection<Integer> col2 = factory1.getCollection(false, 0, true, false);
         col2.add(1);
         col2.add(3);
@@ -30,10 +27,10 @@ public class App {
 
         System.out.println(acum);
 
-        // System.out.println(col2.getClass());
-        // for(Integer i: col2){
-        //     System.out.println(i);
-        // }
+        System.out.println(col2.getClass());
+        for(Integer i: col2){
+            System.out.println(i);
+        }
 
     }
 }

@@ -50,7 +50,6 @@ public class Personagem {
         return new Personagem(visibilidade, poder, vidas);
     }
 
-
     @Override
     public String toString() {
         return "Personagem [visibilidade=" + visibilidade + ", poder=" + poder + ", vidas=" + vidas + "]";
